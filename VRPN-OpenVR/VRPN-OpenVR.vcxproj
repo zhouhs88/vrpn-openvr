@@ -22,6 +22,7 @@
     <ProjectGuid>{5A9FE86D-14AB-4247-8853-31B0717ACAB9}</ProjectGuid>
     <RootNamespace>VRPNVive</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>VRPN-OpenVR</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -81,7 +82,6 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-<<<<<<< HEAD
       <AdditionalIncludeDirectories>../vendor/openvr/headers;../vendor/vrpn;../vendor/vrpn/quat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -90,16 +90,6 @@
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y "$(ProjectDir)..\vendor\openvr\bin\win64\*.dll" "$(OutDir)"</Command>
-=======
-      <AdditionalIncludeDirectories>openvr/headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <AdditionalDependencies>openvr_api.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>openvr/lib/win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
-    <PostBuildEvent>
-      <Command>xcopy /y "$(ProjectDir)openvr\bin\win64\*.dll" "$(OutDir)"</Command>
->>>>>>> e8db19a04c2ef1c6612748b9a47ac5c65940206f
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -130,20 +120,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="vrpn_Vive.cpp" />
+    <ClCompile Include="vrpn_Tracker_OpenVR.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vrpn_Vive.h" />
+    <ClInclude Include="vrpn_Tracker_OpenVR.h" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ProjectReference Include="..\vendor\vrpn\quat\quatlib.vcxproj">
       <Project>{0c16e98c-a372-4e58-990d-ee276b32644e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\vendor\vrpn\vrpn.vcxproj">
-=======
-    <ProjectReference Include="vrpn\vrpn.vcxproj">
->>>>>>> e8db19a04c2ef1c6612748b9a47ac5c65940206f
       <Project>{7ee1db03-16a5-4465-9164-061be0c88b8c}</Project>
     </ProjectReference>
   </ItemGroup>

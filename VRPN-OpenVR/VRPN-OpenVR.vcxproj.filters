@@ -18,12 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vrpn_Vive.cpp">
+    <ClCompile Include="vrpn_Tracker_OpenVR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vrpn_Vive.h">
+    <ClInclude Include="vrpn_Tracker_OpenVR.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
