@@ -5,9 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VRPN-Vive", "VRPN-Vive\VRPN-Vive.vcxproj", "{5A9FE86D-14AB-4247-8853-31B0717ACAB9}"
 EndProject
+<<<<<<< HEAD
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vrpn", "vendor\vrpn\vrpn.vcxproj", "{7EE1DB03-16A5-4465-9164-061BE0C88B8C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quatlib", "vendor\vrpn\quat\quatlib.vcxproj", "{0C16E98C-A372-4E58-990D-EE276B32644E}"
+=======
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vrpn", "VRPN-Vive\vrpn\vrpn.vcxproj", "{7EE1DB03-16A5-4465-9164-061BE0C88B8C}"
+>>>>>>> e8db19a04c2ef1c6612748b9a47ac5c65940206f
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,13 +29,19 @@ Global
 		{5A9FE86D-14AB-4247-8853-31B0717ACAB9}.Release|x64.Build.0 = Release|x64
 		{5A9FE86D-14AB-4247-8853-31B0717ACAB9}.Release|x86.ActiveCfg = Release|Win32
 		{5A9FE86D-14AB-4247-8853-31B0717ACAB9}.Release|x86.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x64.ActiveCfg = Debug|x64
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x64.Build.0 = Debug|x64
+=======
+		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x64.ActiveCfg = Debug|Win32
+		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x64.Build.0 = Debug|Win32
+>>>>>>> e8db19a04c2ef1c6612748b9a47ac5c65940206f
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x86.ActiveCfg = Debug|Win32
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Debug|x86.Build.0 = Debug|Win32
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Release|x64.ActiveCfg = Release|Win32
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Release|x86.ActiveCfg = Release|Win32
 		{7EE1DB03-16A5-4465-9164-061BE0C88B8C}.Release|x86.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Debug|x64.ActiveCfg = Debug|x64
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Debug|x64.Build.0 = Debug|x64
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Debug|x86.ActiveCfg = Debug|Win32
@@ -39,6 +49,8 @@ Global
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Release|x64.ActiveCfg = Release|Win32
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Release|x86.ActiveCfg = Release|Win32
 		{0C16E98C-A372-4E58-990D-EE276B32644E}.Release|x86.Build.0 = Release|Win32
+=======
+>>>>>>> e8db19a04c2ef1c6612748b9a47ac5c65940206f
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
