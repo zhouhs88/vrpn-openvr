@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vrpn", "vendor\vrpn\vrpn.vcxproj", "{7EE1DB03-16A5-4465-9164-061BE0C88B8C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VRPN", "vendor\vrpn\vrpn.vcxproj", "{7EE1DB03-16A5-4465-9164-061BE0C88B8C}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "quatlib", "vendor\vrpn\quat\quatlib.vcxproj", "{0C16E98C-A372-4E58-990D-EE276B32644E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VRPN-Vive", "VRPN-OpenVR\VRPN-OpenVR.vcxproj", "{5A9FE86D-14AB-4247-8853-31B0717ACAB9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VRPN-OpenVR", "VRPN-OpenVR\VRPN-OpenVR.vcxproj", "{5A9FE86D-14AB-4247-8853-31B0717ACAB9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenVR", "OpenVR\OpenVR.vcxitems", "{45D41ACC-2C3C-43D2-BC10-02AA73FFC7C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

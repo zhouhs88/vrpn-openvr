@@ -120,10 +120,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="vrpn_Server_OpenVR.cpp" />
     <ClCompile Include="vrpn_Tracker_OpenVR.cpp" />
+    <ClCompile Include="vrpn_Tracker_OpenVR_Controller.cpp" />
+    <ClCompile Include="vrpn_Tracker_OpenVR_HMD.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vrpn_Server_OpenVR.h" />
     <ClInclude Include="vrpn_Tracker_OpenVR.h" />
+    <ClInclude Include="vrpn_Tracker_OpenVR_Controller.h" />
+    <ClInclude Include="vrpn_Tracker_OpenVR_HMD.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\vrpn\quat\quatlib.vcxproj">

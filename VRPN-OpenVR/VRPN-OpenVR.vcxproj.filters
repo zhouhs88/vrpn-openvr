@@ -18,11 +18,29 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vrpn_Tracker_OpenVR_HMD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vrpn_Tracker_OpenVR_Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vrpn_Server_OpenVR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="vrpn_Tracker_OpenVR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="vrpn_Tracker_OpenVR_HMD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vrpn_Tracker_OpenVR_Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vrpn_Server_OpenVR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="vrpn_Tracker_OpenVR.h">
       <Filter>Header Files</Filter>
     </ClInclude>

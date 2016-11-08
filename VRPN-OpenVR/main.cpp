@@ -1,14 +1,11 @@
 #include <windows.h>
 #include <iostream>
-#include <openvr.h>
 #include <string>
 #include <memory>
-#include "vrpn_Connection.h"
-#include "vrpn_Tracker_OpenVR.h"
+#include "vrpn_Server_OpenVR.h"
 
 static volatile int done = 0;
-vrpn_Connection *connection;
-std::unique_ptr<vrpn_Tracker_OpenVR> openvr{};
+std::unique_ptr<vrpn_Server_OpenVR> server{};
 
 // install a signal handler to shut down the devices
 // On Windows, the signal handler is run in a different thread from
@@ -37,36 +34,12 @@ BOOL WINAPI handleConsoleSignalsWin(DWORD signaltype)
 
 #endif
 
-void shutDown() {
-	if (connection) {
-		connection->removeReference();
-		connection = NULL;
-	}
-}
-
 int main(int argc, char *argv[]) {
-	std::string connectionName = ":" + std::to_string(vrpn_DEFAULT_LISTEN_PORT_NO);
-	connection = vrpn_create_server_connection(connectionName.c_str());
-	openvr = std::make_unique<vrpn_Tracker_OpenVR>("openvr", connection);
-
+	server = std::make_unique<vrpn_Server_OpenVR>();
 	while (!done) {
-		// Let the generic object server do its thing.
-		if (openvr) {
-			openvr->mainloop();
-		}
-
-		// Send and receive all messages.
-		connection->mainloop();
-
-		// Bail if the connection is in trouble.
-		if (!connection->doing_okay()) {
-			shutDown();
-		}
-
-		vrpn_SleepMsecs(0);
+		server->mainloop();
+		vrpn_SleepMsecs(16);
 	}
-
-	shutDown();
-
+	server.reset(nullptr);
     return 0;
 }
