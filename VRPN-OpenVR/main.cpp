@@ -1,6 +1,4 @@
 #include <windows.h>
-#include <iostream>
-#include <string>
 #include <memory>
 #include "vrpn_Server_OpenVR.h"
 
@@ -18,28 +16,27 @@ std::unique_ptr<vrpn_Server_OpenVR> server{};
 */
 BOOL WINAPI handleConsoleSignalsWin(DWORD signaltype)
 {
-	switch (signaltype) {
-	case CTRL_C_EVENT:
-	case CTRL_BREAK_EVENT:
-	case CTRL_CLOSE_EVENT:
-	case CTRL_SHUTDOWN_EVENT:
-		done = 1;
-		return TRUE;
-		// Don't exit, but return FALSE so default handler
-		// gets called. The default handler, ExitProcess, will exit.
-	default:
-		return FALSE;
-	}
+    switch (signaltype) {
+    case CTRL_C_EVENT:
+    case CTRL_BREAK_EVENT:
+    case CTRL_CLOSE_EVENT:
+    case CTRL_SHUTDOWN_EVENT:
+        done = 1;
+        return TRUE;
+        // Don't exit, but return FALSE so default handler
+        // gets called. The default handler, ExitProcess, will exit.
+    default:
+        return FALSE;
+    }
 }
-
 #endif
 
 int main(int argc, char *argv[]) {
-	server = std::make_unique<vrpn_Server_OpenVR>();
-	while (!done) {
-		server->mainloop();
-		vrpn_SleepMsecs(16);
-	}
-	server.reset(nullptr);
+    server = std::make_unique<vrpn_Server_OpenVR>();
+    while (!done) {
+        server->mainloop();
+        vrpn_SleepMsecs(16);
+    }
+    server.reset(nullptr);
     return 0;
 }

@@ -19,24 +19,25 @@ vrpn_Tracker_OpenVR_Controller::vrpn_Tracker_OpenVR_Controller(const std::string
 }
 
 void vrpn_Tracker_OpenVR_Controller::mainloop() {
-	server_mainloop();
-}
+    vrpn_gettimeofday( &(vrpn_Tracker_OpenVR::timestamp), NULL );
+	vrpn_Tracker_OpenVR::mainloop();
 
-void vrpn_Tracker_OpenVR_Controller::server_mainloop() {
-	vrpn_Tracker_OpenVR::server_mainloop();
+	vrpn_gettimeofday( &(vrpn_Analog::timestamp), NULL );
 	vrpn_Analog::report_changes();
+
+
+    vrpn_gettimeofday( &(vrpn_Button_Filter::timestamp), NULL );
 	vrpn_Button_Filter::report_changes();
 }
 
 void vrpn_Tracker_OpenVR_Controller::updateController(vr::TrackedDeviceIndex_t unTrackedDevice) {
 	// Analog & Buttons
 	if (vr->GetTrackedDeviceClass(unTrackedDevice) == vr::TrackedDeviceClass_Controller) {
-		vr::VRControllerState_t pControllerState;
 		vr->GetControllerState(unTrackedDevice, &pControllerState);
 
 		for (unsigned int buttonId = 0; buttonId < vr::k_EButton_Max; ++buttonId) {
 			uint64_t mask = vr::ButtonMaskFromId(static_cast<vr::EVRButtonId>(buttonId));
-			vrpn_Button_Filter::buttons[buttonId] = ((mask & pControllerState.ulButtonPressed) == mask) ? 1 : 0;
+			vrpn_Button_Filter::buttons[buttonId] = static_cast<unsigned char>(((mask & pControllerState.ulButtonPressed) == mask) ? 1 : 0);
 		}
 
 		for (unsigned int axisId = 0; axisId < vr::k_unControllerStateAxisCount; ++axisId) {
