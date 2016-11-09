@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <openvr.h>
 #include <vrpn_Tracker.h>
 #include <quat.h>

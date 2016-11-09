@@ -21,19 +21,19 @@ void vrpn_Tracker_OpenVR::updateTracking(vr::TrackedDevicePose_t *pose) {
 			std::cerr << "[" << name << "] Uninitialized" << std::endl;
 		break;
 		case vr::TrackingResult_Calibrating_InProgress:
-			std::cerr << "[\" << name << \"] Calibrating (In Progress)" << std::endl;
+			std::cerr << "[" << name << "] Calibrating (In Progress)" << std::endl;
 		break;
 		case vr::TrackingResult_Calibrating_OutOfRange:
-			std::cerr << "[\" << name << \"] Calibrating (Out of Range)" << std::endl;
+			std::cerr << "[" << name << "] Calibrating (Out of Range)" << std::endl;
 		break;
 		case vr::TrackingResult_Running_OK:
-			std::cerr << "[\" << name << \"] Running (OK)" << std::endl;
+			std::cerr << "[" << name << "] Running (OK)" << std::endl;
 		break;
 		case vr::TrackingResult_Running_OutOfRange:
-			std::cerr << "[\" << name << \"] Running (Out of Range)" << std::endl;
+			std::cerr << "[" << name << "] Running (Out of Range)" << std::endl;
 		break;
 		default:
-			std::cerr << "[\" << name << \"] Unknown tracking result" << std::endl;
+			std::cerr << "[" << name << "] Unknown tracking result" << std::endl;
 		break;
 		}
 	}
