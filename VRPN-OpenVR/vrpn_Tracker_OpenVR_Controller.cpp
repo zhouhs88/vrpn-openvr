@@ -38,7 +38,7 @@ void vrpn_Tracker_OpenVR_Controller::updateController(vr::TrackedDeviceIndex_t u
 		for (unsigned int buttonId = 0; buttonId < vr::k_EButton_Max; ++buttonId) {
 			uint64_t mask = vr::ButtonMaskFromId(static_cast<vr::EVRButtonId>(buttonId));
 			vrpn_Button_Filter::buttons[buttonId] = static_cast<unsigned char>(((mask & pControllerState.ulButtonTouched) == mask) ? 2 : 0);
-			vrpn_Button_Filter::buttons[buttonId] = static_cast<unsigned char>(((mask & pControllerState.ulButtonPressed) == mask) ? 1 : 0);
+			vrpn_Button_Filter::buttons[buttonId] = static_cast<unsigned char>(((mask & pControllerState.ulButtonPressed) == mask) ? 1 : vrpn_Button_Filter::buttons[buttonId]);
 		}
 
 		for (unsigned int axisId = 0; axisId < vr::k_unControllerStateAxisCount; ++axisId) {
